@@ -1,0 +1,20 @@
+<mat-accordion multi >
+  <mat-expansion-panel hideToggle [expanded]="false">
+    <mat-expansion-panel-header>
+        <div style="display: flex;">
+            <div>search by</div>
+            <input [(ngModel)]="searchBy" type="text" />
+            <div>name</div>
+            <input [(ngModel)]="byName" type="checkbox"/>
+            <div>description</div>
+            <input [(ngModel)]="byDescription" type="checkbox"/>
+            <div>readme</div>
+            <input [(ngModel)]="byReadme" type="checkbox"/>
+        </div>
+    </mat-expansion-panel-header>
+  </mat-expansion-panel>
+</mat-accordion>
+<div style="display: flex;">
+    <button (click)="search()">search</button>
+    <button (click)="reset()">reset</button>
+</div>
